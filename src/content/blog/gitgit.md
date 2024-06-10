@@ -10,10 +10,6 @@ description: "使用git时遇到的问题"
 ---
 # Git
 
-[TOC]
-
-
-
 ## 为Git配置代理
 
 当开启[Clash](https://so.csdn.net/so/search?q=Clash&spm=1001.2101.3001.7020)后，本机网络会被代理  代理IP地址为127.0.0.1:7890
@@ -50,3 +46,55 @@ git push origin master  # 将当前分支push到远程master分支
 
 [更多请见](https://developer.aliyun.com/article/948081)
 
+
+
+## 一次完整的git提交
+
+1. **配置 Git**（如果是首次使用 Git，或者尚未配置用户信息）：
+
+```bash
+git config --global user.name "Your Name"  
+git config --global user.email "your.email@example.com"
+```
+
+2. **初始化 Git 仓库**（如果尚未初始化）：
+
+```bash
+bash复制代码
+
+git init
+```
+
+3. **查看仓库状态**（可选，但有助于了解当前工作区的状态）：
+
+```bash
+bash复制代码
+
+git status
+```
+
+4. **添加到暂存区**（将修改的文件添加到 Git 暂存区）：
+
+```bash
+git add <file_name>  # 添加特定文件  
+# 或者  
+git add .  # 添加所有修改过的文件
+```
+
+5. **提交更改**（将暂存区的更改提交到 Git 仓库）：
+
+```bash
+git commit -m "Commit message"
+```
+
+6. **推送到远程仓库**（如果已经与远程仓库关联，并且想要将本地提交推送到远程）：
+
+```bash
+git push origin <branch_name>
+```
+
+请注意，`<file_name>` 应替换为你想要添加的文件名，`<branch_name>` 应替换为你想要推送的分支名。如果你是首次推送到一个新的远程仓库，你可能需要先设置远程仓库的 URL：
+
+```bash
+git remote add origin <repository_url>
+```
