@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://jayzhou.fun/", // replace this with your deployed domain
   author: "Jay Zhou",
   desc: "Personal blog",
-  title: "Jayzhou's blog",
+  title: "Home",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 6,
@@ -17,7 +17,7 @@ export const LOCALE = {
 } as const;
 
 export const LOGO_IMAGE = {
-  enable: true,
+  enable: false,
   svg: false,
   width: 180,
   height: 100,
